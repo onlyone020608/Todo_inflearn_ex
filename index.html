@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
     <title>ToDo</title>
   </head>
   <body>
     <h1>ToDo</h1>
-    <input type="text" id="todo-input" />
+    <div class="todo-container">
+      <input type="text" id="todo-input" onkeydown="keyCodeCheck(event)" />
+      <ul id="todo-list"></ul>
+    </div>
+    <div class="delete-btn-wrapper">
+      <button onclick="deleteAll()">전체 삭제</button>
+    </div>
   </body>
 </html>
